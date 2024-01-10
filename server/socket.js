@@ -28,5 +28,9 @@ module.exports = (server) => {
       socket.on("disconnect", () => {
         console.log(`${socket.id}가 접속을 끊었습니다`);
       });
+
+      socket.on("error", (x) => {
+        console.log('error', x)
+      });
     })
 }

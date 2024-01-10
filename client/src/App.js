@@ -2,14 +2,18 @@ import io from 'socket.io-client';
 import { useState } from 'react';
 import Chat from './components/Chat';
 import styled from 'styled-components';
+import React from "react";
 
-const socket = io.connect(`http://127.0.0.1`);
+const socket = io.connect(`http://3.35.135.149/`);
 
 function App() {
   const [username, setUsername] = useState('');
   const [room, setRoom] = useState('');
   const [showChat, setShowChat] = useState(false);
   const [errorMsg, setErrorMsg] = useState('');
+  // const [location, setLocation] = React.useState({ ...window.location });
+  
+
 
   const joinRoom = (e) => {
     e.preventDefault();
