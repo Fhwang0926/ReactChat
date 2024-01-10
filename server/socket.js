@@ -2,7 +2,8 @@
 
 module.exports = (server) => {
     // let socket_list = [],
-    let io = require('socket.io')(server, { cors : {  origin: '*', methods: ['GET', 'POST'], } });    
+    let io = require('socket.io')(server, { path: '/s-chat/', cors : {  origin: '*', methods: ['GET', 'POST'], } });    
+    // io.path("/s-chat/");
 
     io.on("connection", (socket) => {
         io.emit("hello", "world");
