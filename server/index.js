@@ -115,10 +115,6 @@ let run = () => {
             // will only respond with JSON
             console.log('web error', err)
             ctx.throw(401, 'no have permission')
-            // ctx.status = 401;
-            // return ctx.body = {
-            //   error: { code: err.statusCode, message: err.message },
-            // };
           }
         }
 
