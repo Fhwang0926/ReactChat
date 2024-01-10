@@ -4,7 +4,7 @@ import Chat from './components/Chat';
 import styled from 'styled-components';
 import React from "react";
 
-const socket = io.connect(`http://3.35.135.149/`);
+const socket = io.connect(`https://t.uwss.asia/`);
 
 function App() {
   const [username, setUsername] = useState('');
